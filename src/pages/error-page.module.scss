@@ -1,0 +1,40 @@
+.error {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    height: 100vh;
+
+    &.dark_mode {
+        background-color: #373737;
+        color: #EDEDED;
+    }
+
+    &__img {
+        width: 50%;
+        border-radius: 28px;
+        box-shadow: 4px 4px 14px rgba(0, 0, 0, 0.25);
+
+        @media (max-width: 1000px) {
+            width: 80%;
+        }
+    }
+
+    &__btn {
+        text-decoration: none;
+        color: black;
+        font-size: 18px;
+        font-weight: 500;
+
+        &.dark_mode {
+            color: #EDEDED;
+        }
+
+        &:hover {
+            color: #8458B3;
+            transition: color .2s ease-in-out;
+            box-shadow: 2px 2px 4px solid #8458B3;
+        }
+    }
+}

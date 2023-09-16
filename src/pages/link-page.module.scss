@@ -1,0 +1,11 @@
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+
+    &.dark_mode {
+        background-color: #373737;
+        color: #EDEDED;
+    }
+}

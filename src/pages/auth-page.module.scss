@@ -1,0 +1,130 @@
+.auth {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+
+    &.dark_mode {
+        background-color: #373737;
+        color: #EDEDED;
+    }
+
+    &__title {
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        margin: 0 auto;
+        width: 33.333333%;
+
+        @media (max-width: 1000px) {
+            width: 50%;
+        }
+
+        @media (max-width: 540px) {
+            width: 75%;
+        }
+
+        &__input {
+            background-color: transparent;
+            padding: 10px;
+            border-radius: 10px;
+            border-color: #8458B3;
+            box-shadow: 2px 2px 4px solid #d0bdf4;
+            font-size: 16px;
+            outline: none;
+
+            transition: all 0.5s ease;
+
+            &.dark_mode {
+                border-color: #2d2d2d;
+                color: #EDEDED;
+                
+                &::placeholder,
+                &:focus {
+                    color: #EDEDED;
+                }
+            }
+
+            &::placeholder {
+                color: #8458B3;
+                opacity: 0.6;
+            }
+
+            &:focus {
+                color: #8458B3;
+                border-color: #8458B3;
+                outline: 0;
+                box-shadow: 0 0 0 0.2rem rgba(158, 158, 158, 0.25);
+            }
+
+            &:disabled,
+            &[readonly] {
+                opacity: 0.5;
+            }
+        }
+
+        &__btn {
+            margin: 10px auto;
+            background-color: transparent;
+            display: flex;
+            justify-content: center;
+            padding: 6px 10px;
+            border-radius: 10px;
+            border-color: #8458B3;
+            box-shadow: 2px 2px 4px solid #d0bdf4;
+            width: 75%;
+            font-size: 16px;
+
+            &.dark_mode {
+                color: #EDEDED;
+                border-color: #2d2d2d;
+                box-shadow: 2px 2px 4px solid #2d2d2d;
+
+                &:hover {
+                    background-color: #474646;
+                    border-color: #2d2d2d;
+                    opacity: 0.8;
+                }
+            }
+
+            transition: all 0.5s ease;
+
+            &:hover {
+                cursor: pointer;
+                background-color: #d0bdf4;
+                border-color: #8458B3;
+                opacity: 0.8;
+            }
+        }
+
+        &__swap {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+
+            &__btn {
+                background-color: transparent;
+                font-size: 16px;
+                border: none;
+
+                &.dark_mode {
+                    color: #EDEDED;
+                }
+
+                transition: all 0.5s ease;
+
+                &:hover {
+                    cursor: pointer;
+                    color: #8458B3;
+                }
+            }
+        }
+    }
+}

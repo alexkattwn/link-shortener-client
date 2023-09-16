@@ -1,0 +1,109 @@
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    padding: 20px 0;
+
+    &.dark_mode {
+        background-color: #373737;
+        color: #EDEDED;
+    }
+
+    &__group {
+        display: flex;
+
+        &__input {
+            background-color: transparent;
+            padding: 10px;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+            border-color: #8458B3;
+            box-shadow: 2px 2px 4px solid #d0bdf4;
+            font-size: 16px;
+            outline: none;
+            width: 600px;
+
+            &.dark_mode {
+                border-color: #2d2d2d;
+                color: #EDEDED;
+                
+                &::placeholder,
+                &:focus {
+                    color: #EDEDED;
+                }
+
+                &:focus {
+                    border-color: #EDEDED;
+                    box-shadow: 1px 1px 2px #EDEDED;
+                }
+            }
+    
+            transition: all 0.5s ease;
+
+            @media (max-width: 740px) {
+                width: 400px;
+            }
+
+            @media (max-width: 540px) {
+                width: 300px;
+            }
+
+            @media (max-width: 440px) {
+                width: 200px;
+            }
+    
+            &::placeholder {
+                color: #8458B3;
+                opacity: 0.6;
+            }
+    
+            &:focus {
+                color: #8458B3;
+                border-color: #8458B3;
+                outline: 0;
+                box-shadow: 0 0 0 0.2rem rgba(158, 158, 158, 0.25);
+            }
+    
+            &:disabled,
+            &[readonly] {
+                opacity: 0.5;
+            }
+        }
+
+        &__btn {
+            background-color: transparent;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 6px 10px;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+            border-left: none;
+            border-color: #8458B3;
+            box-shadow: 2px 2px 4px solid #d0bdf4;
+            font-size: 16px;
+
+            transition: all 0.5s ease;
+
+            &.dark_mode {
+                color: #EDEDED;
+                border-color: #2d2d2d;
+                box-shadow: 2px 2px 4px solid #2d2d2d;
+
+                &:hover {
+                    background-color: #575656;
+                    border-color: #2d2d2d;
+                    opacity: 0.8;
+                }
+            }
+
+            &:hover {
+                cursor: pointer;
+                background-color: #d0bdf4;
+                border-color: #8458B3;
+                opacity: 0.8;
+            }
+        }
+    }
+}
